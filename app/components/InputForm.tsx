@@ -1,11 +1,13 @@
 interface InputFormProps {
   setStartingCapital: React.Dispatch<React.SetStateAction<number>>;
   setMonthlyInvestment: React.Dispatch<React.SetStateAction<number>>;
+  setApy: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export default function InputForm({
   setStartingCapital,
   setMonthlyInvestment,
+  setApy,
 }: InputFormProps) {
   return (
     <div className="bg-gray-200 flex items-center justify-center py-8">
@@ -36,6 +38,18 @@ export default function InputForm({
               setMonthlyInvestment(Number(e.currentTarget.value))
             }
             placeholder="0"
+            className="px-2 py-2"
+          />
+        </div>
+
+        <div className="flex flex-col">
+          <label htmlFor="apy">Estimated % yearly return (APY)</label>
+          <input
+            type="number"
+            id="apy"
+            name="apy"
+            onChange={(e) => setApy(Number(e.currentTarget.value))}
+            defaultValue={5}
             className="px-2 py-2"
           />
         </div>
