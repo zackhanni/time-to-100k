@@ -31,7 +31,7 @@ export default function PlainDataAnswers({
   };
 
   return (
-    <div className="bg-gray-400 py-8">
+    <div className="bg-gray-400 py-8 px-16">
       {/* <p>Starting capital: {startingCapital}</p> */}
       {/* <p>Monthly investment: {monthlyInvestment}</p> */}
       <div className="space-y-4 flex flex-col items-center justify-center ">
@@ -43,14 +43,14 @@ export default function PlainDataAnswers({
                 className="bg-gray-200 px-4 py-2 flex space-x-8 items-center"
               >
                 <p>Months until: {goal}</p>
-                <p className="bg-gray-300 p-1">
+                {/* <p className="bg-gray-300 py-1 px-2 rounded-md">
                   {calculateMonthsToReachGoal(goal)}
-                </p>
+                </p> */}
                 <p>Months until next 100k</p>
-                <p className="bg-gray-300 p-1">
+                {/* <p className="bg-gray-300 py-1 px-2 rounded-md">
                   {calculateMonthsToReachGoal(goal + 100_000) -
                     calculateMonthsToReachGoal(goal)}
-                </p>
+                </p> */}
               </div>
             )
           )
@@ -60,12 +60,12 @@ export default function PlainDataAnswers({
         <div className="bg-gray-200 py-4 px-8 rounded-lg">
           <p>Want to be a millionaire?</p>
           <p>At this rate, becoming a millionaire will take:</p>
-          <p>
+          {/* <p>
             {calculateMonthsToReachGoal(1_000_000) < 12
               ? calculateMonthsToReachGoal(1_000_000) + " months"
               : Math.floor(calculateMonthsToReachGoal(1_000_000) / 12) +
                 " years"}
-          </p>
+          </p> */}
         </div>
       </div>
     </div>
