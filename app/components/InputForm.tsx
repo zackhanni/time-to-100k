@@ -1,16 +1,25 @@
+import DarkModeSwitch from "./DarkModeSwitch";
+
 interface InputFormProps {
   setStartingCapital: React.Dispatch<React.SetStateAction<number>>;
   setMonthlyInvestment: React.Dispatch<React.SetStateAction<number>>;
   setApy: React.Dispatch<React.SetStateAction<number>>;
+  darkMode: boolean;
 }
 
 export default function InputForm({
   setStartingCapital,
   setMonthlyInvestment,
   setApy,
+  darkMode,
 }: InputFormProps) {
   return (
-    <div className="bg-gray-200 flex items-center justify-center py-8">
+    //finish setting up dark mode here
+    <div
+      className={`bg-[#E9F1FA] ${
+        darkMode ? "bg-slate-600 text-white" : "bg-[#E9F1FA]"
+      } flex items-center justify-center py-8`}
+    >
       <form
         // action="/action_page.php"
         // onSubmit={}
@@ -24,7 +33,7 @@ export default function InputForm({
             name="initial capital"
             onChange={(e) => setStartingCapital(Number(e.currentTarget.value))}
             placeholder="0"
-            className="px-2 py-2"
+            className="px-2 py-2 text-black"
           />
         </div>
 
@@ -38,7 +47,7 @@ export default function InputForm({
               setMonthlyInvestment(Number(e.currentTarget.value))
             }
             placeholder="0"
-            className="px-2 py-2"
+            className="px-2 py-2 text-black"
           />
         </div>
 
@@ -50,7 +59,7 @@ export default function InputForm({
             name="apy"
             onChange={(e) => setApy(Number(e.currentTarget.value))}
             defaultValue={5}
-            className="px-2 py-2"
+            className="px-2 py-2 text-black"
           />
         </div>
 
