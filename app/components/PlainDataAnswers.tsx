@@ -1,5 +1,4 @@
-// PlainDataAnswers.tsx
-import React from "react";
+import Image from "next/image";
 
 const goals = [
   100_000, 200_000, 300_000, 400_000, 500_000, 600_000, 700_000, 800_000,
@@ -33,10 +32,17 @@ export default function PlainDataAnswers({
   };
 
   return (
-    <div className=" py-8 px-4 sm:px-16 flex justify-center">
+    <div className=" py-8 px-4 sm:px-16 flex flex-col justify-center">
       {/* <p>Starting capital: {startingCapital}</p> */}
       {/* <p>Monthly investment: {monthlyInvestment}</p> */}
-      <div className="text-black space-y-4 flex flex-col items-center w-full justify-center max-w-screen-sm">
+      <Image
+        src="/piggy-bank.svg"
+        width={100}
+        height={100}
+        alt="Picture of the author"
+        className="mx-auto"
+      />
+      <div className="text-black space-y-4 flex flex-col items-center w-full justify-center max-w-screen-sm mx-auto">
         {startingCapital > 0 || (monthlyInvestment > 0 && apy > 0) ? (
           goals.map((goal) =>
             startingCapital > goal ? null : (
