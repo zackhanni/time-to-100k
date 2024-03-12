@@ -1,17 +1,26 @@
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="flex flex-col sm:flex-row items-center justify-center py-16 ">
-      <div className="flex flex-col max-w-md space-y-4 px-4 sm:px-4 ">
+      <div className="flex flex-col max-w-lg space-y-4 px-4 sm:px-4 ">
         <h1 className="text-2xl">
-          How long does it take to make 100k? and the next?
+          <span className="font-bold text-7xl sm:text-8xl pb-4">How long</span>
+          <br /> does it take to make 100k?
         </h1>
         <p>
-          Enter your starting balance the how much you invest monthly to find
-          out how long it will take you to earn 100k.
+          This tool empowers users to strategize their path to significant
+          wealth accumulation with confidence. Elevate your investment strategy
+          today and chart a direct course towards your financial aspirations.
         </p>
-        {/* <div className="bg-[#00ABE4] h-8 w-full px-8 border-b-4 border-black"></div> */}
+        <a
+          href="#input"
+          className=" bg-[#00ABE4] flex items-center justify-center py-2 px-4 mx-auto rounded-sm text-white"
+        >
+          <FontAwesomeIcon className="pr-2" icon={faArrowDown} /> Scroll down
+        </a>
       </div>
 
       <Image
