@@ -17,14 +17,14 @@ export default function InputForm({
     //finish setting up dark mode here
     <section
       id="input"
-      className={`bg-[#E9F1FA] ${
-        darkMode ? "bg-slate-600 text-white" : "bg-[#E9F1FA]"
+      className={` ${
+        darkMode ? "bg-[#ffb3cb] text-[#203b20]" : "bg-pink-100"
       } flex flex-col sm:flex-row items-center justify-center py-8 space-y-8 sm:space-y-0`}
     >
       <form
         // action="/action_page.php"
         // onSubmit={}
-        className="flex flex-col max-w-screen-md space-y-4"
+        className="flex flex-col max-w-screen-lg space-y-4 px-4"
       >
         <div className="flex flex-col">
           <label htmlFor="initial-capital">Starting capital</label>
@@ -76,7 +76,7 @@ export default function InputForm({
         </button> */}
       </form>
       <div>
-        <p className="max-w-md ml-16">
+        <p className="max-w-lg px-4">
           Our platform offers precise calculations for the accumulation of
           wealth, starting with initial monthly contributions and adjusting for
           expected Annual Percentage Yields (APY).

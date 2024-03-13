@@ -22,7 +22,7 @@ const externalLinks = [
 
 export default function Footer() {
   return (
-    <section className="py-16 text-white bg-gray-700 flex flex-col items-center space-y-8">
+    <section className="py-16 text-white bg-[#203b20] flex flex-col items-center space-y-8">
       <div className="flex items-center justify-center">
         <h2 className="text-2xl max-w-xs">
           Interested in learning more about personal finance?

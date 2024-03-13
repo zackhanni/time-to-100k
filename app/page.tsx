@@ -17,11 +17,11 @@ export default function Home() {
   return (
     <main
       className={`overflow-hidden ${
-        darkMode ? " bg-black text-white" : "bg-white text-black"
+        darkMode ? " bg-[#203b20] text-white" : "bg-white text-black"
       }`}
     >
       <DarkModeSwitch setDarkMode={setDarkMode} />
-      <Hero />
+      <Hero darkMode={darkMode} />
       <InputForm
         setStartingCapital={setStartingCapital}
         setMonthlyInvestment={setMonthlyInvestment}

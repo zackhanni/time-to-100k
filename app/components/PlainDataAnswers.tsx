@@ -49,19 +49,27 @@ export default function PlainDataAnswers({
               <div
                 key={goal}
                 className={`px-4 py-2 flex flex-col sm:flex-row sm:space-x-8 items-center space-y-4 sm:space-y-0 w-full rounded-md ${
-                  darkMode ? "bg-slate-600 text-white" : "bg-[#E9F1FA]"
+                  darkMode ? "bg-[#ffb3cb] text-black" : "bg-pink-100"
                 } `}
               >
                 <div className="flex justify-between items-center w-full">
                   <p>Months until: {goal}</p>
-                  <p className="bg-[#00ABE4] text-white py-1 px-2 rounded-md">
+                  <p
+                    className={`${
+                      darkMode ? "bg-pink-100" : "bg-[#ffb3cb]"
+                    } text-black py-1 px-2 rounded-md`}
+                  >
                     {calculateMonthsToReachGoal(goal)}
                   </p>
                 </div>
 
                 <div className="flex justify-between items-center w-full">
                   <p>Months until next 100k</p>
-                  <p className="bg-[#00ABE4] text-white py-1 px-2 rounded-md">
+                  <p
+                    className={`${
+                      darkMode ? "bg-pink-100" : "bg-[#ffb3cb]"
+                    } text-black py-1 px-2 rounded-md`}
+                  >
                     {calculateMonthsToReachGoal(goal + 100_000) -
                       calculateMonthsToReachGoal(goal)}
                   </p>
@@ -77,7 +85,7 @@ export default function PlainDataAnswers({
         {(startingCapital > 0 || (monthlyInvestment > 0 && apy > 0)) && (
           <div
             className={`bg-[#E9F1FA] py-4 px-4 rounded-md w-full ${
-              darkMode ? "bg-slate-600 text-white" : "bg-[#E9F1FA]"
+              darkMode ? "bg-[#ffb3cb] text-black" : "bg-pink-100"
             }`}
           >
             <p className="font-bold text-lg text-center pb-4">
@@ -85,7 +93,11 @@ export default function PlainDataAnswers({
             </p>
             <div className="flex items-center sm:space-x-8 justify-between">
               <p>At this rate, it will take you:</p>
-              <p className="bg-[#00ABE4] text-white py-1 px-2 rounded-md">
+              <p
+                className={`${
+                  darkMode ? "bg-pink-100" : "bg-[#ffb3cb]"
+                } text-black py-1 px-2 rounded-md`}
+              >
                 {calculateMonthsToReachGoal(1_000_000) < 12
                   ? calculateMonthsToReachGoal(1_000_000) + " months"
                   : Math.floor(calculateMonthsToReachGoal(1_000_000) / 12) +
