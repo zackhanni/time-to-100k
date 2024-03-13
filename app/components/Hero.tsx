@@ -2,7 +2,11 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
-export default function Hero({ darkMode }) {
+interface HeroProps {
+  darkMode: boolean;
+}
+
+export default function Hero({ darkMode }: HeroProps) {
   return (
     <section className="flex flex-col sm:flex-row items-center justify-center py-16 ">
       <div className="flex flex-col max-w-lg space-y-4 px-4">
